@@ -118,9 +118,14 @@ div.slide.selected {
 .normal .main {
   color: rgba(0,0,0,0.7);
   margin: 40px;
+  font-size: 28px;
   margin-top: 60px;
 }
 
+.normal .main li {
+	list-style: inside;
+	line-height: 150%;
+}
 .normal .main img{
   margin: 20px;
 }
