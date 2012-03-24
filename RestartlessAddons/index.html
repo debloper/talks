@@ -18,10 +18,136 @@
 </div>
 <div class="normal slide">
   <div class="content">
-    <div class="header"></div>
-    <div class="subheader"></div>
+    <div class="header">Types of Firefox Addons</div>
+    <div class="subheader">&nbsp;</div>
     <div class="main">
-      <h1 class="header"></h1>
+      <ol>
+        <li>Extensions</li>
+        <li>Themes</li>
+        <li>Locales</li>
+        <li>Multiple Item Package/Bundles</li>
+      </ol>
+      <hr />
+      <p>All major Mozilla-products handles addons in a same fashion.</p>
+      <p>One single addon package can serve multiple products, each accross multiple versions.</p>
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">Structure of an extension</div>
+    <div class="subheader">General Boilerplate</div>
+    <div class="main">
+      <small><pre>
+extension.xpi:                //Extension Package
+  /install.rdf                //Extension information
+  /chrome.manifest            //Chrome-Registration
+  /chrome/
+  /chrome/content/            //Main XUL/JS files
+  /chrome/icons/default/*     //Extension Icons etc.
+  /chrome/locale/*            //Extension Localization
+  /defaults/preferences/*.js  //Extension Defaults Prefs
+  /plugins/*
+  /components/*
+  /components/cmdline.js
+      </pre></small>
+      <p>To understand better, unzip &amp; browse this "Hello World!" extension: <a href="http://mozilla.doslash.org/stuff/helloworld.zip" title="Sample Extension">http://mozilla.doslash.org/stuff/helloworld.zip</a> .
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">Addon Development Environment</div>
+    <div class="subheader">Setup: Step by step...</div>
+    <div class="main">
+      <ol>
+        <li>Create a new Firefox development profile</li>
+        <li>Set development preferences in about:config</li>
+        <li>Install development (helper) extensions</li>
+        <li>Create an addon directory structure</li>
+        <li>Add proxy file to "install" the addon</li>
+        <li>Fill install.rdf with necessary details</li>
+      </ol>
+      Find the details for each of the steps in this Etherpad<br />
+      <a href="https://etherpad.mozilla.org/addon-workshop-cbmit" title="Addon Workshop: Carte Blanche, MIT">https://etherpad.mozilla.org/addon-workshop-cbmit</a>
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">Bootstrapped Extensions...</div>
+    <div class="subheader">or more generally: "Restartless Addons"</div>
+    <div class="main">
+      <ol>
+        <li>Contain a special <code>bootstrap.js</code> file at the root</li>
+        <li>Use Startup/Shutdown scripts to load/unload</li>
+        <li>Can (hot-)install/remove itself on-the-fly</li>
+        <li>Can apply changes while application is running</li>
+        <li>Don't depend on the legacy "XUL overlay" mechanism</li>
+        <li>Almost no application version dependency/restrictions</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">Choose Development Environment</div>
+    <div class="subheader">Let's get our hands dirty...</div>
+    <div class="main">
+      <dl>
+        <dt>Add-on SDK <small>[<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.zip" title="Latest Jetpack SDK">Download Link</a>]</small></dt>
+        <small>
+          <ol>
+            <li>Work locally/offline</li>
+            <li>Control/customize defaults</li>
+            <li>Choose your own editor, revision control etc.</li>
+          </ol>
+        </small>
+        <br />
+        <dt>Add-on Builder <small>[<a href="https://builder.addons.mozilla.org/" title="Add-on Builder Web-App">Web-App URL</a>]</small></dt>
+        <small>
+          <ol>
+            <li>Edit codes in rich online-editor</li>
+            <li>Test add-ons instantly as you go</li>
+            <li>Save time with automated build system</li>
+            <li>Automated code saving and revision control</li>
+          </small>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">&nbsp;</div>
+    <div class="subheader">&nbsp;</div>
+    <div class="main">
+      <h1>Add-on Development is in Progress:</h1>
+      <p>Please grab your "Jetpack" to fly with us,</p>
+      <p>Or, hold your breath &amp; count the pulse... :P</p>
+    </div>
+  </div>
+</div>
+<div class="normal slide">
+  <div class="content">
+    <div class="header">You made it!</div>
+    <div class="subheader">Hacking Firefox, the fun way...</div>
+    <div class="main">
+      <p>
+        MDN Add-on Docs: <a href="https://builder.addons.mozilla.org/docs/" title="Official Documentation" target="_blank">https://builder.addons.mozilla.org/docs/</a><br />
+        ExtDev IRC Channel: <a href="http://chat.mibbit.com/?server=irc.mozilla.org&channel=%23extdev" title="Join MozNet via Mibbit" target="_blank">irc://irc.mozilla.org/#extdev</a>
+      </p>
+      <p>
+        Get these slides live at:
+        <a href="http://debloper.github.com/talks/RestartlessAddons" title="Presentation Link" target="_blank">http://debloper.github.com/talks/RestartlessAddons</a>
+      </p>
+      <p>
+        Fork my GitHub repos <a href="https://github.com/debloper" title="Github Profile" target="_blank">@Debloper</a><br />
+        Or, follow me on Twitter <a href="https://twitter.com/Debloper" title="Twitter Handle" target="_blank">@Debloper</a>
+      </p>
+      <p>
+        Thanks!
+      </p>
     </div>
   </div>
 </div>
