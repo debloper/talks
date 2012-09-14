@@ -42,7 +42,7 @@
 				</section>
 
 				<section>
-					<h2>A Theoretical URL</h2>
+					<h2>Anatomy of a URL</h2>
 					<pre class="fragment"><code contenteditable>
 https://www.domain.com:8080/path/page.ext?variable=value#moredata
 \___/   \_______________________________/ \_____________________/
@@ -61,6 +61,65 @@ foo://user:pass@domain.tld:1234/path/page.ext?i=j&var=val#unicorn
           |         |        |   |     |   |       |   |     |
        identity  hostname  port path file type    key value hash
 					</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Gotta Catch 'Em All?</h2>
+						<br/>
+						<h4>Explore the:</h4>
+						<h3>location; location; location;</h3>
+					</section>
+
+					<section>
+						<h1>Examples</h1>
+						<br/>
+						<h2>Examples</h2>
+						<br/>
+						<h4>Examples</h4>
+					</section>
+				</section>
+
+				<section>
+					<h1>The Good URL</h1>
+					<br/>
+					<ul>
+						<li class="fragment">Simple, short &amp; readable</li>
+						<li class="fragment">Predictable parameter models</li>
+						<li class="fragment">Good location hierarchy design</li>
+						<li class="fragment">Optimal usage of dynamic-parameters</li>
+						<li class="fragment">Proper casing &amp; serialized URL encoding</li>
+						<li class="fragment">Unique content per URL, unique URL per content</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>The Bad URL</h1>
+					<br/>
+					<ul>
+						<li class="fragment">Port no., Hashbangs</li>
+						<li class="fragment">Malformed dynamic-data</li>
+						<li class="fragment">Anti-intuitive parameters</li>
+						<li class="fragment">Forced filename extensions</li>
+						<li class="fragment">Too long file paths &amp; levels</li>
+						<li class="fragment">Weird characters &amp; delimiters</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Link Shortening &amp; Permalinks</h2>
+					<br/>
+					<ul>
+						<li class="fragment"><a href="http://www.w3.org/Provider/Style/URI.html">Cool URIs don't change</a></li>
+						<li class="fragment">
+							<code contenteditable>
+								[a-zA-Z0-9_-] = 26+26+10+2 = 64 options
+								=> abc.com/xx (for x in [a-zA-Z0-9_-])
+								Gives 64^2 = 4096 possible combinations
+							</code>
+						</li>
+						<li class="fragment">http://domain.com/&lt;uniqueID&gt;/human-readable-title</li>
+					</ul>
 				</section>
 
 			</div>
