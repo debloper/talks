@@ -41,6 +41,28 @@
 					<p>&mdash; Soumya <a href="http://twitter.com/Debloper" title="Debloper at Twitter" target="_blank">@Debloper</a> Deb</p>
 				</section>
 
+				<section>
+					<h2>A Theoretical URL</h2>
+					<pre class="fragment"><code contenteditable>
+https://www.domain.com:8080/path/page.ext?variable=value#moredata
+\___/   \_______________________________/ \_____________________/
+  |                     |                            |
+ type            hierarchical part              dynamic data
+					</code></pre>
+					<pre class="fragment"><code contenteditable>
+foo://user:pass@domain.tld:1234/path/page.ext?var=val&i=j#unicorn
+\_/   \_______________________/ \___________/ \________/  \_____/
+ |                |                   |           |          |
+protocol      authority            location     query    fragment
+					</code></pre>
+					<pre class="fragment"><code contenteditable>
+foo://user:pass@domain.tld:1234/path/page.ext?i=j&var=val#unicorn
+      \_______/ \________/ \__/\___/ \__/ \_/     \_/ \_/ \_____/
+          |         |        |   |     |   |       |   |     |
+       identity  hostname  port path file type    key value hash
+					</code></pre>
+				</section>
+
 			</div>
 
 			<!-- The navigational controls UI -->
