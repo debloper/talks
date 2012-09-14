@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Workflow Graph - Source Browser v4</title>
+		<title>URL &amp; Routing Logic</title>
 
-		<meta name="description" content="Presenting the workflow graph in Source Browser v4, using Reveal.JS">
+		<meta name="description" content="A presentation on URL anatomy, routing schemes and best practices">
 		<meta name="author" content="Soumya Deb">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,7 +42,7 @@
 				</section>
 
 				<section>
-					<h2>Anatomy of a URL</h2>
+					<h2><a href="http://en.wikipedia.org/wiki/URI_scheme">Anatomy of a URL</a></h2>
 					<pre class="fragment"><code contenteditable>
 https://www.domain.com:8080/path/page.ext?variable=value#moredata
 \___/   \_______________________________/ \_____________________/
@@ -81,29 +81,30 @@ foo://user:pass@domain.tld:1234/path/page.ext?i=j&var=val#unicorn
 				</section>
 
 				<section>
-					<h1>The Good URL</h1>
-					<br/>
-					<ul>
-						<li class="fragment">Simple, short &amp; readable</li>
-						<li class="fragment">Predictable parameter models</li>
-						<li class="fragment">Good location hierarchy design</li>
-						<li class="fragment">Optimal usage of dynamic-parameters</li>
-						<li class="fragment">Proper casing &amp; serialized URL encoding</li>
-						<li class="fragment">Unique content per URL, unique URL per content</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>The Bad URL</h1>
-					<br/>
-					<ul>
-						<li class="fragment">Port no., Hashbangs</li>
-						<li class="fragment">Malformed dynamic-data</li>
-						<li class="fragment">Anti-intuitive parameters</li>
-						<li class="fragment">Forced filename extensions</li>
-						<li class="fragment">Too long file paths &amp; levels</li>
-						<li class="fragment">Weird characters &amp; delimiters</li>
-					</ul>
+					<section>
+						<h1>The Good URL</h1>
+						<br/>
+						<ul>
+							<li class="fragment">Simple, short &amp; readable</li>
+							<li class="fragment">Predictable parameter models</li>
+							<li class="fragment">Good location hierarchy design</li>
+							<li class="fragment">Unique &amp; normalized URL per content</li>
+							<li class="fragment">Optimal usage of dynamic-parameters</li>
+							<li class="fragment">Proper casing &amp; serialized URL encoding</li>
+						</ul>
+					</section>
+					<section>
+						<h1>The Bad URL</h1>
+						<br/>
+						<ul>
+							<li class="fragment"><a href="http://manas.tungare.name/blog/url-design-sins-16-things-that-dont-belong-in-urls/">Port, Hashbang, Index</a></li>
+							<li class="fragment">Malformed dynamic-data</li>
+							<li class="fragment">Anti-intuitive parameters</li>
+							<li class="fragment">Forced filename extensions</li>
+							<li class="fragment">Too long file paths &amp; levels</li>
+							<li class="fragment">Weird characters &amp; delimiters</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
@@ -119,6 +120,33 @@ foo://user:pass@domain.tld:1234/path/page.ext?i=j&var=val#unicorn
 							</code>
 						</li>
 						<li class="fragment">http://domain.com/&lt;uniqueID&gt;/human-readable-title</li>
+						<li class="fragment">Smarter 404 pages (with prediction &amp; redirection)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>RESTful WebApps</h2>
+					<h4>a.k.a: I can haz teh "<a href="http://en.wikipedia.org/wiki/Clean_URL">Clean URLs</a>"</h4>
+					<br/>
+					<ul>
+						<li class="fragment">URL identifies a resource</li>
+						<li class="fragment">Resources have proper hierarchy</li>
+						<li class="fragment">Extensions are only useful for multi-format</li>
+						<li class="fragment">SessionIDs, authentications aren't a part of URL</li>
+						<li class="fragment">Nouns point to the resources, and Verbs operate on them</li>
+						<li class="fragment">The operation requests (GET/POST/PUT/DELETE) aren't a part of the URL</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>So, what did we cover?</h2>
+					<br/>
+					<ul>
+						<li class="fragment">URL Structure &amp; Formation</li>
+						<li class="fragment">Parsing URL components with JavaScript</li>
+						<li class="fragment">Salient fatures of the good &amp; the bad URLs</li>
+						<li class="fragment">How does URL shorteners work &amp; how to use them</li>
+						<li class="fragment">How web-application URLs should be schemed &amp; designed</li>
 					</ul>
 				</section>
 
