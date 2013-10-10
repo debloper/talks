@@ -242,9 +242,8 @@ blockquote .quotesource {
 
 /* Code */
 .slide pre {
-	margin:0 0 45px;
+	margin:0 0 24px;
 	counter-reset:code;
-	white-space:normal;
 	}
 	.slide pre code {
 		display:block;
