@@ -211,6 +211,7 @@ blockquote .quotesource {
 	.slide ul ol {
 		margin:0 0 0 38px;
 		}
+	/*
 	.slide ol > li:before,
 	.slide ul > li:before {
 		position:absolute;
@@ -220,16 +221,18 @@ blockquote .quotesource {
 		text-align:right;
 		}
 	.slide ul > li:before {
-		content:'\2022'; /* bull */
+		content:'\2022';
 		line-height:1.1;
 		font-size:40px;
 		}
+	*/
 	.slide ol > li:before {
 		counter-increment:list;
 		content:counter(list)'.';
 		}
   /* Inner navigation */
   .inner li {
+  	list-style: inside;
     opacity: 0.05;
     -webkit-transition: opacity 1s;
 	     -moz-transition: opacity 1s;
