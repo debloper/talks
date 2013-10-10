@@ -18,6 +18,8 @@
   <style type="text/css">
     img[src="pictures/FxOS.png"] { float:left; }
     .cover header h4 { margin-left: 12px; font-weight: bold; font-size: 0.8em; }
+    code { display: block; white-space: pre; line-height: 1.5; }
+    header.middle h2 { background: rgba(0,0,0,0.8); padding: 1rem; border-radius: 1rem; }
   </style>
 </head>
 <body class="list">
@@ -34,7 +36,7 @@
   <aside class="talkdescription">
     <p class="abstract">
       <span style="font-weight:bold;">Abstract: </span>
-      This talk revolves around the idea, how Internet as a Platform changes the game. It will compare the Native vs. Web applications. In the end, it will show the world map how and where Firefox OS is spreading step by step &amp; the opportunities of Indian Freelancers &amp; Startups in the global open app-marketplace.
+      This talk revolves around the idea, how Internet as a Platform changes the game. How is it different from other platforms, what possibilities it has, where Firefox OS is spreading &amp; the opportunities of Indian Freelancers &amp; Startups in the global open app-marketplace.
     </p>
   </aside>
 
@@ -172,6 +174,32 @@ Red Hatter, Mozillian et al.</pre>
     </section>
   </div></div>
 
+  <div id="webapis" class="slide w"><div>
+    <section>
+      <header>
+        <h2>Exposing hardware to the Web</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <ul class="inner">
+        <li class="active">WebTelephony API</li>
+        <li>Geolocation API</li>
+        <li>Device Storage API</li>
+        <li>Contacts API</li>
+        <li>Vibration API</li>
+        <li>Alarm API</li>
+        <li><em>...and more!</em></li>
+      </ul>
+      <p class="demourl">
+        <a href="https://wiki.mozilla.org/WebAPI">WebAPIs Wiki</a> •
+        <a href="https://developer.mozilla.org/docs/WebAPI">WebAPIs MDN</a>
+      </p>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
   <div id="platformView" class="slide w"><div>
     <section>
       <header>
@@ -225,16 +253,215 @@ Red Hatter, Mozillian et al.</pre>
     </section>
   </div></div>
 
-  <div id="id" class="slide w"><div>
+  <div id="apps" class="slide w"><div>
     <section>
       <header>
-        <h2></h2>
+        <h2>Apps: teh Interwebz on demand</h2>
       </header>
       <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <img src="pictures/appgrid.png" alt="App Grid" height="400" />
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="manifest" class="slide w"><div>
+    <section>
+      <header>
+        <h2>The Manifest file</h2>
+      </header>
+      <code>{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/",
+  "icons": { "128": "/img/icon-128.png" },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  }
+}</code>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="install" class="slide w"><div>
+    <section>
+      <header>
+        <h2>Installing Apps</h2>
+      </header>
+      <code>var manifestURL = "http://your.app/webapp.manifest",
+installer = navigator.mozApps.install(manifestURL);
+
+installer.onsuccess = function(data) {
+  // App is installed
+};
+installer.onerror = function() {
+ // App installation failed...
+ // Check installapp.error.name for details
+};</code>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="security" class="slide w"><div>
+    <section>
+      <header>
+        <h2>Permissions &amp; Levels of Access</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <p>The Manifest file also lists permissions.</p>
+      <ul class="inner">
+        <li class="active"><b>Hosted apps</b></li>
+        <li><b>Privileged apps</b></li>
+        <li><b>Certified apps</b></li>
+      </ul>
+      <p class="demourl">
+        <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#permissions">
+          Permission Example
+        </a>
+      </p>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="discovery" class="slide w"><div>
+    <section>
+      <header>
+        <h2>App Discovery</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <ul class="inner">
+        <li class="active">Decentralized Marketplaces</li>
+        <li>Search Engine Indexing</li>
+        <li>Adaptive Search</li>
+      </ul>
+      <p class="demourl">
+        <a href="https://marketplace.firefox.com/">
+          Firefox OS Marketplace
+        </a>
+      </p>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="jsfiddle" class="slide w"><div>
+    <section>
+      <header>
+        <h2>Live Prototyping with JSFiddle</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <ul class="inner">
+        <li class="active">Append <mark>&nbsp;/webapp.manifest&nbsp;</mark> to your fiddle link</li>
+        <li>Or, append <mark>&nbsp;/fxos.html&nbsp;</mark> to your fiddle link</li>
+      </ul>
+      <p class="demourl">
+        <a href="http://jsfiddle.net/">
+          JSFiddle!
+        </a>
+      </p>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="minione" class="slide w"><div>
+    <section>
+      <img src="pictures/minions.jpg"
+           class="middle shadow"
+           alt="AWESOME!" />
+      <header class="middle"><h2>AWESOME!</h2></header>
+    </section>
+  </div></div>
+
+  <div id="awesome" class="slide w"><div>
+    <section>
+      <header>
+        <h2>That's just the tip of the iceberg...</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <ul class="inner">
+        <li class="active">UI Components</li>
+        <li>Appmaker</li>
+        <li>App Manager</li>
+      </ul>
       <p class="demourl">
         <a href="#">
-          Link
+          <a href="http://mozilla.github.io/brick/">Mozilla Brick</a> •
+          <a href="http://buildingfirefoxos.com/">Building Blocks</a> •
+          <a href="http://flathead.herokuapp.com/">Flathead Demo</a>
         </a>
+      </p>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="wiifm" class="slide w"><div>
+    <section>
+      <header>
+        <h2>What's in it for me?</h2>
+      </header>
+      <img src="pictures/FxOS.png" alt="Firefox OS" height="400" />
+      <ul class="inner">
+        <li class="active">As a consumer</li>
+        <li>As a developer</li>
+        <li>As a network carrier</li>
+        <li>As a device vendor</li>
+      </ul>
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="interwebz" class="slide w"><div>
+    <section>
+      <header>
+        <h2>I Can Haz Teh Interwebz!</h2>
+      </header>
+      <img src="pictures/internet.gif" alt="Worldwide Internet Usage Infographics" height="400" />
+      <small class="byline">
+        Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
+      </small>
+      <footer class="notes"></footer>
+    </section>
+  </div></div>
+
+  <div id="closure" class="slide w"><div>
+    <section>
+      <header>
+        <h2>Thank You!</h2>
+      </header>
+      <img src="pictures/vcard.png" alt="Contact Details" height="400" style="float: right;" />
+      <p>
+        Yet again...
+        <br /><br />
+        I am Soumya <b>Deb</b>
+        <br />
+        I tweet from <a href="http://twitter.com/Debloper">@Debloper</a>
+        <br />
+        <a href="http://debs.io/">DebS.IO</a> is my website.
+        <br /><br />
+        ... Questions?
       </p>
       <small class="byline">
         Soumya Deb, at Mobile Developer Summit &mdash; Bangalore, 2013
